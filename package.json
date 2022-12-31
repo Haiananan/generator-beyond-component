@@ -1,0 +1,25 @@
+{
+  "name": "generator-beyond",
+  "version": "1.0.0",
+  "description": "生成haian-admin-nodets中的基础CRUD业务代码",
+  "main": "index.js",
+  "keywords": [
+    "generator-beyond"
+  ],
+  "files": [
+    "generators"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^5.7.0"
+  },
+  "devDependencies": {
+    "joi": "^17.7.0",
+    "mongoose": "^6.8.2",
+    "prettier": "^2.8.1"
+  }
+}

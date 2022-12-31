@@ -1,0 +1,43 @@
+const chai = require('chai')
+const request = require('supertest')
+const app = require('../src/config/server/server').default
+const <%= name %> = require('../src/components/<%= path %><%= name %>/model').default
+chai.should()
+
+// 定义测试中可能需要的全局变量
+global._id = ''
+
+// 测试前钩子
+before(async () => {
+  try {
+    // 做点什么
+  } catch (error) {
+    console.log('在开始测试之前出了点问题', error.message)
+  }
+})
+
+/**
+ * API tests
+ */
+describe('测试任务', () => {
+  it('测试任务名称', (done) => {
+    request(app)
+      .post()
+      .send()
+      .set('authorization', global.token)
+      .expect((res) => {
+        res.status.should.equal(200)
+        // 更多断言
+      })
+      .end(done)
+  })
+})
+
+// 测试后钩子
+after(async () => {
+  try {
+    // 做点什么
+  } catch (error) {
+    console.log('测试结束之后出了点问题', error.message)
+  }
+})

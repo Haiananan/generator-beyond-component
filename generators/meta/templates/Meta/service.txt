@@ -1,0 +1,13 @@
+import <%= name %>, { <%= name %>Model } from '<%= path %>./model'
+import * as Validation from '<%= path %>./validation'
+import * as Service from '<%= path %>../service'
+
+export const create = (data: any) => Service.create<<%= name %>Model>(<%= name %>, data, Validation.create)
+
+export const find = (data: any) => Service.find<<%= name %>Model>(<%= name %>, data, Validation.find)
+
+export const findById = (_id: string) => Service.findById<<%= name %>Model>(<%= name %>, _id)
+
+export const update = (data: any) => Service.update<<%= name %>Model>(<%= name %>, data, Validation.update)
+
+export const remove = (data: any) => Service.remove<<%= name %>Model>(<%= name %>, data)

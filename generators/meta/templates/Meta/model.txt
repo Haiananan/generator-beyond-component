@@ -1,0 +1,10 @@
+import { Document, Schema } from 'mongoose'
+import * as connections from '<%= path %>../../config/connection/connection'
+
+export interface <%= name %>Model extends Document {
+  readonly _id: Schema.Types.ObjectId
+}
+
+const <%= name %>Schema: Schema = new Schema({})
+
+export default connections.<%= dbName %>.model<<%= name %>Model>('<%= name %>', <%= name %>Schema)

@@ -1,0 +1,14 @@
+import { Router } from 'express'
+import * as <%= name %>Component from '../components/<%= path %><%= name %>'
+
+const router: Router = Router()
+
+router.get('/', <%= name %>Component.find)
+
+router.post('/', <%= name %>Component.create)
+
+router.put('/', <%= name %>Component.update)
+
+router.delete('/', <%= name %>Component.remove)
+
+export default router
