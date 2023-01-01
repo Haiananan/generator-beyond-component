@@ -209,7 +209,7 @@ module.exports = class extends Generator {
         "\n" +
         indexOld.replace(
           "express.Router()",
-          `express.Router()\n\n  app.use('${this.answers.name}', ${this.answers.name}Router)`
+          `express.Router()\n\n  app.use('/${this.answers.name}', ${this.answers.name}Router)`
         )
     );
   }
@@ -238,7 +238,7 @@ module.exports = class extends Generator {
       this.destinationPath("src/components/index.ts")
     );
 
-    let insertImport = `import * as ${this.answers.name}Component from './${
+    let insertImport = `import * as ${this.answers.name}Component from '.${
       this._formatPath(this.answers.menuPath) + "/"
     }${this.answers.name}'`;
 
