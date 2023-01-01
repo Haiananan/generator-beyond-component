@@ -8,7 +8,7 @@ const validateCreateSchema = Joi.object({
   age: Joi.number().required().min(1).max(120),
   sex: Joi.string().required().valid('female','male'),
   birthday: Joi.date(),
-  status: Joi.boolean().required(),
+  status: Joi.boolean().default(true),
   profile: Joi.any(),
 
 }).unknown(false)
@@ -19,7 +19,7 @@ const validateUpdateSchema = Joi.object({
   age: Joi.number().min(1).max(120),
   sex: Joi.string().valid('female','male'),
   birthday: Joi.date(),
-  status: Joi.boolean(),
+  status: Joi.boolean().default(true),
   profile: Joi.any(),
 
 }).unknown(false)

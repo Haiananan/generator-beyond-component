@@ -9,7 +9,7 @@ export interface Demo1Model extends Document {
   hobby?: string[]
   sex: 'female' | 'male'
   birthday?: Date
-  status: boolean
+  status?: boolean
   profile?: any
 
 }
@@ -21,8 +21,8 @@ const Demo1Schema: Schema = new Schema({
   hobby: { type: [String] },
   sex: { type: String, required: true, enum: ["female", "male"] },
   birthday: { type: Date },
-  status: { type: Boolean, required: true },
+  status: { type: Boolean, default: true },
   profile: { type: Schema.Types.Mixed },
 })
-
+// 根据Schema生成Model,Validation,service
 export default connections.dbMain.model<Demo1Model>('Demo1', Demo1Schema)

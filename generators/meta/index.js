@@ -136,13 +136,7 @@ module.exports = class extends Generator {
       validationStringWithoutRequired,
       unique,
     } = codeService(targetModelPath);
-    console.log(
-      modelString,
-      validationString,
-      validationStringWithoutRequired,
-      unique,
-      targetModelPath
-    );
+
     this.fs.write(
       targetModelPath,
       this.fs

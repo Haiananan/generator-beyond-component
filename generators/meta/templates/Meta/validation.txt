@@ -2,9 +2,9 @@ import * as Joi from 'joi'
 import { FindFormType, validateFindSchema, checkValidate } from '<%= path %>../validation'
 import { <%= name %>Model } from '<%= path %>./model'
 
-const validateCreateSchema = Joi.object({}).unknown(false)
+const validateCreateSchema = Joi.object({}).unknown(true)
 
-const validateUpdateSchema = Joi.object({}).unknown(false)
+const validateUpdateSchema = Joi.object({}).unknown(true)
 
 export const create = (data: any) => checkValidate<<%= name %>Model>(data, validateCreateSchema)
 
